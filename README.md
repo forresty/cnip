@@ -4,6 +4,8 @@ test if an IP belongs to mainland China
 
 `chnroutes.txt` originally from [https://github.com/clowwindy/ChinaDNS](https://github.com/clowwindy/ChinaDNS)
 
+[![Code Climate](https://codeclimate.com/github/forresty/cnip/badges/gpa.svg)](https://codeclimate.com/github/forresty/cnip)
+
 ## Installation
 
 Add this line to your application's Gemfile:
