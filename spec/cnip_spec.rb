@@ -23,7 +23,7 @@ describe CNIP do
         expect(subject.include?('8.8.8.8')).to eq(false)
       end
 
-      it 'still conforms to default include? semantic' do
+      it 'still conforms to default include? semantics' do
         expect(subject.include?(FooModule)).to eq(true)
         expect(subject.include?(BarModule)).to eq(false)
       end
