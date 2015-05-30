@@ -47,6 +47,12 @@ To update `chnroute.txt`, run
 curl 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | grep ipv4 | grep CN | awk -F\| '{ printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > data/chnroute.txt
 ```
 
+To update `usroute.txt`, run
+
+```shell
+curl 'http://ftp.arin.net/pub/stats/arin/delegated-arin-extended-latest' | grep ipv4 | grep US | awk -F\| '{ printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > data/usroute.txt
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/forresty/cnip/fork )
