@@ -9,11 +9,11 @@ module CNIP
     end
 
     alias_method :original_include?, :include?
-    def include?(another)
-      return original_include?(another) if another.is_a?(Module)
+    def include?(ip_or_module)
+      return original_include?(ip_or_module) if ip_or_module.is_a?(Module)
 
       CIDRList.each do |cidr|
-        return true if cidr.matches?(another)
+        return true if cidr.matches?(ip_or_module)
       end
 
       false
